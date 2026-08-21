@@ -23,10 +23,10 @@ jobs:
         python -m pip install --upgrade pip
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
-    - name: Download Fairy-Stockfish
+    - name: Download Fairy-Stockfish to System Path
       run: |
-        wget https://github.com -O stockfish
-        chmod +x stockfish
+        sudo wget https://github.com -O /usr/local/bin/stockfish
+        sudo chmod +x /usr/local/bin/stockfish
 
     - name: Run Lichess Bot
       env:
