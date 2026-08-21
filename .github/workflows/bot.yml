@@ -25,8 +25,8 @@ jobs:
 
     - name: Download Fairy-Stockfish to System Path
       run: |
-        sudo wget https://github.com -O /usr/local/bin/stockfish
-        sudo chmod +x /usr/local/bin/stockfish
+        sudo wget https://github.com -O /usr/local/bin/fairy-stockfish
+        sudo chmod +x /usr/local/bin/fairy-stockfish
 
     - name: Run Lichess Bot
       env:
