@@ -8,6 +8,14 @@ engine:                            # Engine settings.
 # interpreter: "java"
 # interpreter_options:
 #   - "-jar"
+
+  eval_file_crazyhouse: "/usr/local/bin/crazyhouse.nnue"
+  eval_file_atomic: "/usr/local/bin/atomic.nnue"
+  eval_file_antichess: "/usr/local/bin/antichess.nnue"
+  eval_file_horde: "/usr/local/bin/horde.nnue"
+  eval_file_racingkings: "/usr/local/bin/racingkings.nnue"
+  eval_file_3check: "/usr/local/bin/3check.nnue"
+  
   working_dir: ""                  # Directory where the chess engine will read and write files. If blank or missing, the current directory is used.
                                    # NOTE: If working_dir is set, the engine will look for files and directories relative to this directory, not where lichess-bot was launched. Absolute paths are unaffected.
   protocol: "uci"                  # "uci", "xboard" or "homemade"
@@ -100,16 +108,11 @@ engine:                            # Engine settings.
     Threads: 2                     # Max CPU threads the engine can use.
     Hash: 512                      # Max memory (in megabytes) the engine can allocate.
     SyzygyPath: "./syzygy/"        # Paths to Syzygy endgame tablebases that the engine reads.
-    UCI_ShowWDL: true              # Show the chance of the engine winning.
+    UCI_ShowWDL: true
+    BestBookMove: true
 
     Use NNUE: true
     EvalFile: "/usr/local/bin/classical.nnue"
-    EvalFileCrazyhouse: "/usr/local/bin/crazyhouse.nnue"
-    EvalFileAtomic: "/usr/local/bin/atomic.nnue"
-    EvalFileAntichess: "/usr/local/bin/antichess.nnue"
-    EvalFileHorde: "/usr/local/bin/horde.nnue"
-    EvalFileRacingKings: "/usr/local/bin/racingkings.nnue"
-    EvalFile3Check: "/usr/local/bin/3check.nnue"
 #   go_commands:                   # Additional options to pass to the UCI go command.
 #     nodes: 1                     # Search so many nodes only.
 #     depth: 5                     # Search depth ply only.
