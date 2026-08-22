@@ -34,6 +34,7 @@ jobs:
 
     - name: Unzip opening book
       run: |
+        mkdir -p assets
         unzip book.zip -d ./assets/
 
     - name: Run Lichess Bot
