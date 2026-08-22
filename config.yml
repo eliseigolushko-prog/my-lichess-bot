@@ -102,7 +102,6 @@ engine:                            # Engine settings.
     Hash: 512                      # Max memory (in megabytes) the engine can allocate.
     SyzygyPath: "./syzygy/"        # Paths to Syzygy endgame tablebases that the engine reads.
     UCI_ShowWDL: true
-    BestBookMove: true
 
     Use NNUE: true
     EvalFile: "/usr/local/bin/classical.nnue"
