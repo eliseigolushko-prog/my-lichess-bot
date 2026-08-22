@@ -28,6 +28,14 @@ jobs:
         sudo wget https://github.com/fairy-stockfish/Fairy-Stockfish/releases/download/fairy_sf_14/fairy-stockfish_x86-64-modern -O /usr/local/bin/fairy-stockfish
         sudo chmod +x /usr/local/bin/fairy-stockfish
 
+    - name: Download chess opening book
+      run: |
+        wget -O book.zip https://github.com/ChrisWhittington/polyglot-books/releases/download/v1.0/book.zip
+
+    - name: Unzip opening book
+      run: |
+        unzip book.zip -d ./assets/
+
     - name: Run Lichess Bot
       env:
         LICHESS_BOT_TOKEN: ${{ secrets.LICHESS_BOT_TOKEN }}
