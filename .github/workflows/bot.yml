@@ -37,6 +37,19 @@ jobs:
         mkdir -p assets
         unzip book.zip -d ./assets/
 
+    - name: Download NNUE
+      run: |
+
+        sudo wget --no-check-certificate https://tests.stockfishchess.org/api/nn/nn-46832cfbead3.nnue -O /usr/local/bin/classical.nnue
+
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1nieguR4yCb0BlME-AUhcrFYkmyIOGvqs&export=download" -O /usr/local/bin/crazyhouse.nnue
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1bC7T3iDft8Kbuxlu3Vm2fERxk7cOSoDy&export=download" -O /usr/local/bin/atomic.nnue
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1x25r_1PgB5XqttkfR494M4rseiIm0BAV&export=download" -O /usr/local/bin/antichess.nnue
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=16BQztGqFIS1n_dYtmdfFVE2EexF-KagX&export=download" -O /usr/local/bin/horde.nnue
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1Tiq8FqSu7eiekE2iaWQzSdJPg-mhvLzJ&export=download" -O /usr/local/bin/racingkings.nnue
+        sudo wget --no-check-certificate "https://drive.google.com/u/0/uc?id=1z5oUQbqiE0ZIoQ8Z64y2lF91Rz1rUoWP&export=download" -O /usr/local/bin/3check.nnue
+
+
     - name: Run Lichess Bot
       env:
         LICHESS_BOT_TOKEN: ${{ secrets.LICHESS_BOT_TOKEN }}
