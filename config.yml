@@ -101,6 +101,16 @@ engine:                            # Engine settings.
     Hash: 512                      # Max memory (in megabytes) the engine can allocate.
     SyzygyPath: "./syzygy/"        # Paths to Syzygy endgame tablebases that the engine reads.
     UCI_ShowWDL: true              # Show the chance of the engine winning.
+
+    Use NNUE: true
+    EvalFile: "/usr/local/bin/classical.nnue"
+    EvalFileCrazyhouse: "/usr/local/bin/crazyhouse.nnue"
+    EvalFileChess960: "/usr/local/bin/chess960.nnue"
+    EvalFileAtomic: "/usr/local/bin/atomic.nnue"
+    EvalFileAntichess: "/usr/local/bin/antichess.nnue"
+    EvalFileHorde: "/usr/local/bin/horde.nnue"
+    EvalFileRacingKings: "/usr/local/bin/racingkings.nnue"
+    EvalFile3Check: "/usr/local/bin/3check.nnue"
 #   go_commands:                   # Additional options to pass to the UCI go command.
 #     nodes: 1                     # Search so many nodes only.
 #     depth: 5                     # Search depth ply only.
