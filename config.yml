@@ -105,7 +105,6 @@ engine:                            # Engine settings.
     Use NNUE: true
     EvalFile: "/usr/local/bin/classical.nnue"
     EvalFileCrazyhouse: "/usr/local/bin/crazyhouse.nnue"
-    EvalFileChess960: "/usr/local/bin/chess960.nnue"
     EvalFileAtomic: "/usr/local/bin/atomic.nnue"
     EvalFileAntichess: "/usr/local/bin/antichess.nnue"
     EvalFileHorde: "/usr/local/bin/horde.nnue"
